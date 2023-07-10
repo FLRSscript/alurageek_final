@@ -39,13 +39,13 @@ const mostrarProductosAdmin = (nombre, precio, imagen, id, categoria, descripcio
                             icon: 'success',
                             title: 'El producto ha sido eliminado',
                             showConfirmButton: false,
-                            timer: 5000 // Ajusta el valor del temporizador a 5000 milisegundos (5 segundos) o el valor deseado
+                            timer: 2000 // Ajusta el valor del temporizador a 5000 milisegundos (5 segundos) o el valor deseado
                         });
                         setTimeout(() => {
                             const limpiaContenido = ``;
                             productos.innerHTML = limpiaContenido;
                             imprimirProductos();
-                        }, 5700);
+                        }, 2000);
                     })
                     .catch(error => {
                         alert("Ocurrió un error al momento de eliminar");

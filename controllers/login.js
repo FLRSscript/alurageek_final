@@ -18,7 +18,7 @@ const loginUsuario = () => {
     if (usuario === user && password === pass) {
 
         Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'success',
             title: 'Login Exitoso',
             showConfirmButton: false,

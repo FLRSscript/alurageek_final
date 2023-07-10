@@ -51,7 +51,7 @@ form.addEventListener("submit", (evento) => {
             timer: 1500
         })
         setTimeout(function () {
-            window.location.href = "./views/admin.html";
+            window.location.href = "./admin.html";
         }, 2000);
     })
 })

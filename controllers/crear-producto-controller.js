@@ -12,16 +12,14 @@ form.addEventListener("submit", (eventosubmit) => {
     const imagen = document.querySelector('[data-form-imagen]').value;
 
     clientServices.crearProducto(nombre, precio, imagen, categoria, descripcion)
-        .then(() => {
-            Swal.fire(
-                'Perfecto!',
-                'Producto Creado!',
-                'success'
-            );
-            console.log(respuesta);
-            window.location.href = "../index.html";
-        })
-        .catch((error) => {
-            console.log(error);
-        });
+    .then(() => {
+      Swal.fire(
+        'Perfecto!',
+        'Producto Creado!',
+        'success'
+      )
+      setTimeout(() =>{
+        window.location.href = './admin.html';
+      }, 2000)
+    }).catch((err) => console.log(err));
 });

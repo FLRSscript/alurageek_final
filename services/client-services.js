@@ -1,17 +1,17 @@
 //consultar productos
-const listaProductos = () => fetch('http://localhost:3000/productos').then(respuesta => respuesta.json());
+const listaProductos = () => fetch('https://e-commerce-db-7192.onrender.com/productos').then(respuesta => respuesta.json());
 
 
 //detalle producto
 const detalleProducto = async (id) => {
-    return fetch(`http://localhost:3000/productos/${id}`)
+    return fetch(`https://e-commerce-db-7192.onrender.com/productos/${id}`)
         .then(respuesta => respuesta.json())
 }
 
 
 //crear productos
 const crearProducto = (nombre, precio, imagen, categoria, descripcion) => {
-    fetch(`http://localhost:3000/productos`, {
+    return fetch(`https://e-commerce-db-7192.onrender.com/productos`, {
         method: "POST",
         headers: {
             "Content-type": "application/json"
@@ -39,7 +39,7 @@ const crearProducto = (nombre, precio, imagen, categoria, descripcion) => {
 
 //editar productos corregido
 const actualizarProducto = (nombre, precio, imagen, id, categoria, descripcion) => {
-    return fetch(`http://localhost:3000/productos/${id}`, {
+    return fetch(`https://e-commerce-db-7192.onrender.com/productos/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -61,7 +61,7 @@ const actualizarProducto = (nombre, precio, imagen, id, categoria, descripcion) 
 
 //eliminar productos
 const eliminarProducto = (id) => {
-    return fetch(`http://localhost:3000/productos/${id}`, {
+    return fetch(`https://e-commerce-db-7192.onrender.com/productos/${id}`, {
         method: "DELETE"
     })
 }
